@@ -9,6 +9,7 @@ Feature: Users should be able to login
   @login
   Scenario Outline: Verify login with different user types
     Given the user logged in as "<user type>"
+   # Given the user logged in with username as "<username>" and password as "<password>"
     Then user land on base page
 
     Examples:

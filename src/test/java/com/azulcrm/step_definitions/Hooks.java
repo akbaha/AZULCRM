@@ -29,14 +29,12 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
-    //@Before (value = "@login", order = 2 )
-    public void login_scenario_before(){
-        System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
+    @Before (value = "@login", order = 2 )
+    public void login_scenario_before(Scenario lo){
+
     }
 
-    /*
-    @After will be executed automatically after EVERY scenario in the project.
-     */
+
     @After
     public void teardownMethod(Scenario scenario){
 
