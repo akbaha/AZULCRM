@@ -29,6 +29,9 @@ public class LoginPage {
     @FindBy(xpath = "//a[@href='/?forgot_password=yes']")
     public WebElement forgotYourPassword;
 
+    @FindBy(xpath = "//div[@class='errortext']")
+    public WebElement incorrectLoginOrPasswordMsg;
+
 
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
