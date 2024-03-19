@@ -1,4 +1,7 @@
+
+
 @wip
+
 Feature: Users should be able to login
   User Story:
   As a user, I should be able to login.
@@ -10,7 +13,10 @@ Feature: Users should be able to login
   @login
   Scenario Outline: Verify login with different user types
     Given the user logged in as "<user type>"
+
+
    # Given the user logged in with username as "<username>" and password as "<password>"
+
     Then user land on base page
 
     Examples:
@@ -40,6 +46,15 @@ Feature: Users should be able to login
     When user login both username and password is empty
     Then user should see Please fill out this field error message
 
+
+
+  Scenario: Verify that the "Remember me on this computer" link exists and is clickable on the login page.
+    Then Remember me on this computer link exists and is clickable on the login page
+
+
+  Scenario: Verify that the password is in bullet signs by default.
+    When user enter password in password area
+    Then user should see the password in bullet signs
 
     Scenario: Verify that the "Remember me on this computer" link exists and is clickable on the login page.
       Then Remember me on this computer link exists and is clickable on the login page
