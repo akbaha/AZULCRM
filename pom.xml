@@ -62,6 +62,8 @@
                     <includes>
                         <include>**/CukesRunner*.java</include>
                     </includes>
+                    <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
+                    <reportFormat>json</reportFormat>
                 </configuration>
             </plugin>
         </plugins>
